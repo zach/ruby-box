@@ -6,7 +6,8 @@ module RubyBox
     OAUTH2_URLS = {
       :site => 'https://www.box.com',
       :authorize_url => "/api/oauth2/authorize",
-      :token_url => "/api/oauth2/token"
+      :token_url => "/api/oauth2/token",
+      :ssl => {:version => :SSLv23}
     }
 
     def initialize(opts={}, backoff=0.1)
