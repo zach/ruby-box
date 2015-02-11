@@ -7,7 +7,7 @@ module RubyBox
       :site => 'https://www.box.com',
       :authorize_url => "/api/oauth2/authorize",
       :token_url => "/api/oauth2/token",
-      :ssl => {:version => :SSLv23}
+      :ssl => {:version => :SSLv23, :verify => false}
     }
 
     def initialize(opts={}, backoff=0.1)
