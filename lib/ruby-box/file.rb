@@ -28,7 +28,7 @@ module RubyBox
     end
 
     def stream( opts={} )
-      open(download_url, opts)
+      open(download_url, opts.merge({ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE}))
     end
 
     def upload_content( data )
